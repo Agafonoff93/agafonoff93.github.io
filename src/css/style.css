@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:600,800&display=swap&subset=cyrillic");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:600,700&display=swap&subset=cyrillic");
 /* fonts family */
 /* color */
 /* Basic setting */
@@ -48,10 +48,18 @@ body {
 select {
   padding: 10rem 0;
 }
+.section-header {
+  margin: 10rem 0 10rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 3.6rem;
+  text-align: center;
+}
 /* main */
 .main {
   padding: 3rem 0;
   background: #ffffff url(/src/img/avtobc.jpg) center center no-repeat;
+  background-size: cover;
   /*Подзаголовок*/
   /*Зеленый ярлык*/
   /*оплата по факту*/
@@ -64,7 +72,7 @@ select {
 .main-content h1 {
   margin-bottom: 4rem;
   font-family: "Montserrat", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 2.8rem;
   line-height: 4rem;
   text-transform: uppercase;
@@ -85,13 +93,13 @@ select {
 .main span strong {
   font-size: 3rem;
   font-family: "Montserrat", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
 }
 .main-trigger {
   font-size: 2.2rem;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   display: block;
   margin-top: 1.5rem;
   color: #ffffff;
@@ -157,12 +165,60 @@ select {
   vertical-align: middle;
   text-align: right;
 }
+.phone-block {
+  text-align: right;
+}
 .phone-link {
   display: inline-block;
   color: #1a1820;
   font-family: "Montserrat", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.8rem;
   height: 7rem;
   line-height: 7rem;
+}
+.features-block {
+  text-align: center;
+}
+.features-block h3 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+.features-block p {
+  font-size: 1.6rem;
+  width: 90%;
+  display: inline-block;
+}
+.features-img {
+  height: 8rem;
+  margin-bottom: 7rem;
+}
+.features-img img {
+  display: block;
+  margin: 0 auto;
+}
+.slick-active {
+  outline: none;
+}
+.arrow {
+  top: 50%;
+  -webkit-transform: scaleY(-50%);
+          transform: scaleY(-50%);
+  z-index: 99;
+  width: 5rem;
+  height: 5rem ;
+  border: none;
+  position: absolute;
+}
+.prev {
+  background: url(/src/img/arrow-left.png) center no-repeat;
+  left: 0;
+  background-size: 70%;
+}
+.next {
+  background: url(/src/img/arrow-right.png) center no-repeat;
+  right: 0;
+  background-size: 70%;
 }

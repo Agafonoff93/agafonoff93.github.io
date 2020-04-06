@@ -1,5 +1,5 @@
 /* fonts family */
-@import url("https://fonts.googleapis.com/css?family=Montserrat:600,800&display=swap&subset=cyrillic");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:600,700&display=swap&subset=cyrillic");
 
 .reg() {
   font-family: "Montserrat", sans-serif;
@@ -7,7 +7,7 @@
 }
 .bold() {
   font-family: "Montserrat", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
 }
 /* color */
 @btn-color: #036ffc;
@@ -65,12 +65,18 @@ select {
   padding: 10rem 0;
 }
 
+.section-header {
+  margin: 10rem 0 10rem;
+  .bold();
+  font-size: 3.6rem;
+  text-align: center;
+}
+
 /* main */
 .main {
   padding: 3rem 0;
   background: #fff url(/src/img/avtobc.jpg) center center no-repeat;
-  // background-size: 1800px;
-  // height: 700px;
+  background-size: cover;
   &-content {
     margin-top: 10rem;
     /*Главный заголовок*/
@@ -179,11 +185,65 @@ select {
     text-align: right;
   }
 }
-.phone-link {
-  display: inline-block;
-  color: @text;
+.phone {
+  &-block {
+    text-align: right;
+  }
+  &-link {
+    display: inline-block;
+    color: @text;
+    .bold();
+    font-size: 1.8rem;
+    height: 7rem;
+    line-height: 7rem;
+  }
+}
+
+.features {
+  &-block {
+text-align: center;
+h3{
+  font-size: 2rem;
+  margin-bottom: 3rem;
   .bold();
-  font-size: 1.8rem;
-  height: 7rem;
-  line-height: 7rem;
+}
+p {
+  font-size: 1.6rem;
+  width: 90%;
+  display: inline-block;
+}
+  }
+  &-img {
+    height: 8rem;
+    margin-bottom: 7rem;
+    img {
+      display: block;
+      margin: 0 auto;
+      
+    }
+    
+  }
+}
+.slick-active {
+outline: none;
+}
+.arrow {
+  top: 50%;
+  transform: scaleY(-50%);
+  z-index: 99;
+  width: 5rem;
+  height: 5rem ;
+  border: none;
+  position: absolute;
+  
+}
+.prev {
+  background: url(/src/img/arrow-left.png) center no-repeat;
+  left: 0;
+  background-size: 70%;
+}
+.next {
+  background: url(/src/img/arrow-right.png) center no-repeat;
+  right: 0;
+  background-size: 70%;
 }
