@@ -323,9 +323,11 @@ select {
 }
 .feedback-prev-btn {
   left: -4rem;
+  padding: 0rem;
 }
 .feedback-next-btn {
   right: -4rem;
+  padding: 0rem;
 }
 .feedback-text {
   margin-top: 2rem;
@@ -341,7 +343,7 @@ select {
   top: -2rem;
   left: 4rem;
   width: 2rem;
-  height: 2rem;
+  height: 2.1rem;
   background-color: #ffffff;
   border: 2px solid #46b814;
   border-bottom: none;
@@ -370,7 +372,7 @@ select {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  width: 5rem;
+  width: 4rem;
   border: none;
 }
 .feedback-slider-btn img {
@@ -629,11 +631,57 @@ select {
   .phone-block {
     text-align: center;
     margin-top: 1rem;
+    width: 100%;
+  }
+  .wrap {
+    display: table;
+    width: 100%;
+    height: 7rem;
+  }
+  .wrap-block {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
   }
   .main-trigger {
     display: none;
   }
   .main span {
     display: none;
+  }
+}
+@media (max-width: 456px) {
+  .main-content {
+    margin-top: 22rem;
+    font-size: 0.5rem;
+  }
+  .main-title h1 {
+    font-size: 1.4rem;
+    padding: 1rem;
+    margin: 4rem 0rem 0rem 0rem;
+    line-height: 2rem;
+  }
+  .main-title h1:before {
+    content: "\2022";
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+  }
+  .main-title p {
+    font-size: 1.4rem;
+    padding: 1rem;
+    margin-top: 0rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+  }
+  .main-title p:before {
+    content: "\2022";
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
   }
 }
