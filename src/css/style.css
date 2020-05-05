@@ -58,6 +58,37 @@ textarea:focus {
   cursor: pointer;
   background-color: #2acc45;
 }
+/*Оформление форм*/
+.form {
+  margin: 0;
+  /*pole dl vvoda*/
+  /*пописи к полям*/
+  /*кнопка*/
+}
+.form-input {
+  display: block;
+  margin: 2rem 0;
+  width: 100%;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  padding: 1.8rem;
+}
+.form label {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  padding: 0.5rem;
+  font-size: 1.3rem;
+  background-color: #ffffff;
+}
+.form-btn {
+  display: block;
+  height: 5.5rem;
+  width: 100%;
+  font-size: 1.6rem;
+  white-space: nowrap;
+}
 /* Typography */
 select {
   padding: 10rem 0;
@@ -133,9 +164,6 @@ select {
   padding: 4rem 5rem;
   text-align: center;
   /*заголовок формы*/
-  /*pole dl vvoda*/
-  /*пописи к полям*/
-  /*кнопка*/
   /*подписи под кнопкой*/
 }
 .main-form-header {
@@ -144,30 +172,6 @@ select {
 }
 .main-form-header strong {
   font-size: 1.9rem;
-}
-.main-form-input {
-  display: block;
-  margin: 2rem 0;
-  width: 100%;
-  border: 1px solid #dddddd;
-  border-radius: 5px;
-  padding: 1.8rem;
-}
-.main-form label {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-          transform: translateX(-50%) translateY(-50%);
-  padding: 0.5rem;
-  font-size: 1.3rem;
-  background-color: #ffffff;
-}
-.main-form-btn {
-  display: block;
-  height: 5.5rem;
-  width: 100%;
-  font-size: 1.6rem;
-  white-space: nowrap;
 }
 .main-form small {
   display: block;
@@ -238,10 +242,10 @@ select {
           transform: scaleY(-50%);
   z-index: 99;
   width: 5rem;
-  height: 5rem ;
+  height: 5rem;
   border: none;
   position: absolute;
-  opacity: 0.5 ;
+  opacity: 0.5;
 }
 .prev {
   background: url(/src/img/arrow-left.png) center no-repeat;
@@ -272,6 +276,7 @@ select {
           box-shadow: 7px 12px 21px 0px rgba(0, 0, 0, 0.17);
   text-align: center;
   min-height: 50rem;
+  margin-bottom: 3rem;
 }
 .price-block h4 {
   margin: 3rem 0;
@@ -300,7 +305,7 @@ select {
   line-height: 1.6rem;
 }
 .price-list li:before {
-  content: '\2714';
+  content: "\2714";
   display: inline-block;
   width: 2.5rem;
   height: 2.5rem;
@@ -308,6 +313,94 @@ select {
   color: #05cc05;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
+}
+/*Секция с отзывами*/
+.feedback {
+  position: relative;
+  background: url(/src/img/feedback/feedback-bg.jpg) no-repeat center;
+  background-size: cover;
+  /*оформление обратной формы*/
+}
+.feedback-prev-btn {
+  left: -4rem;
+}
+.feedback-next-btn {
+  right: -4rem;
+}
+.feedback-text {
+  margin-top: 2rem;
+  padding: 1rem;
+  border: 2px solid #46b814;
+  font-style: italic;
+  position: relative;
+}
+.feedback-text::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -2rem;
+  left: 4rem;
+  width: 2rem;
+  height: 2rem;
+  background-color: #ffffff;
+  border: 2px solid #46b814;
+  border-bottom: none;
+  border-top-right-radius: 100px;
+}
+.feedback-slider {
+  padding: 5rem 6rem;
+  background-color: #ffffff;
+  -webkit-box-shadow: 6px 10px 10px 0px rgba(0, 0, 0, 0.11);
+          box-shadow: 6px 10px 10px 0px rgba(0, 0, 0, 0.11);
+  margin-bottom: 5rem;
+}
+.feedback-slider .media {
+  margin-top: 3rem;
+  font-size: 1.4rem;
+}
+.feedback-slider .media h4 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+.feedback-slider p {
+  font-size: 1.6rem;
+}
+.feedback-slider-btn {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 5rem;
+  border: none;
+}
+.feedback-slider-btn img {
+  width: 100%;
+}
+.feedback-form {
+  margin-top: 5rem;
+  padding: 4rem 10rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+.feedback-form h3 {
+  margin-bottom: 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+.feedback-form label {
+  -webkit-transform: translate(-50%, 8px);
+          transform: translate(-50%, 8px);
+}
+.feedback-btn {
+  max-width: 30rem;
+  margin: auto;
+}
+.hand {
+  position: absolute;
+  bottom: 0;
+  left: 5rem;
+  max-width: 30rem;
 }
 /*Оформление модальных окон*/
 .popup {
@@ -351,9 +444,44 @@ select {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
+@media (max-width: 1199px) {
+  .feedback-form {
+    padding: 3rem 5rem;
+  }
+  .fotorama {
+    margin-bottom: 3rem;
+  }
+  .hand {
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    max-width: 20rem;
+  }
+  .price {
+    /*Карточки с тарифами*/
+  }
+  .price-header-btn {
+    margin-top: 7rem;
+  }
+  .price-button {
+    text-align: right;
+  }
+  .price-block {
+    padding: 2rem 3rem 4rem;
+    background-color: #ffffff;
+    -webkit-box-shadow: 7px 12px 21px 0px rgba(0, 0, 0, 0.17);
+            box-shadow: 7px 12px 21px 0px rgba(0, 0, 0, 0.17);
+    text-align: center;
+    min-height: 50rem;
+    margin-bottom: 3rem;
+  }
+  .price-block h4 {
+    min-height: 6rem;
+  }
+}
 @media (max-width: 991px) {
   .main {
-    background-position: top  ;
+    background-position: top;
   }
   .phone-block {
     text-align: center;
@@ -378,14 +506,44 @@ select {
     padding: 3rem 4rem;
   }
   .price-header-btn {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    padding: 1rem 2rem;
   }
   .price-block {
     margin-top: 4rem;
   }
   .price .section-header_light {
     margin-bottom: 0;
+  }
+  .price-list {
+    padding: 0;
+    list-style: none;
+    min-height: 18rem;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+  }
+  .price-list li:before {
+    content: "\2714";
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    vertical-align: middle;
+    color: #05cc05;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+  }
+  .price-block {
+    padding: 1rem 1.5rem 4rem;
+  }
+  .feedback-form {
+    padding: 0rem 0rem;
+  }
+  .feedback-form label {
+    white-space: nowrap;
+  }
+}
+@media (max-width: 850px) {
+  .hand {
+    left: 0;
   }
 }
 @media (max-width: 767px) {
@@ -421,16 +579,61 @@ select {
   .price-block {
     margin-top: 2rem;
   }
-  .price .section-header_light {
+  .price-section-header_light {
     margin-bottom: 0;
   }
-}
-/*
-  .header {
-    text-align: center;
+  .hand {
+    display: none;
   }
-  .wrap-block {
-    text-align: center;
+  .feedback-prev-btn {
+    left: 0rem;
+  }
+  .feedback-next-btn {
+    right: 0rem;
   }
 }
-*/
+@media (max-width: 575px) {
+  .main-content {
+    margin-top: 13rem;
+    font-size: 0.5rem;
+  }
+  .main-title h1 {
+    font-size: 1.4rem;
+    padding: 1rem;
+    margin-top: 4rem;
+    line-height: 2rem;
+  }
+  .main-title h1:before {
+    content: "\2022";
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+  }
+  .main-title p {
+    font-size: 1.4rem;
+    padding: 1rem;
+    margin-top: 0rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+  }
+  .main-title p:before {
+    content: "\2022";
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+  }
+  .phone-block {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  .main-trigger {
+    display: none;
+  }
+  .main span {
+    display: none;
+  }
+}

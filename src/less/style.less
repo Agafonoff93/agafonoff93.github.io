@@ -10,7 +10,7 @@
   font-weight: 700;
 }
 /* color */
-@btn1-color:#036ffc;
+@btn1-color: #036ffc;
 @btn-color: #3ad654;
 @icons-color: #46b814;
 @text: #1a1820;
@@ -30,7 +30,10 @@ body {
 a:hover {
   text-decoration: none;
 }
-button, input, a, textarea {
+button,
+input,
+a,
+textarea {
   &:focus {
     outline: none;
   }
@@ -72,9 +75,42 @@ button, input, a, textarea {
     cursor: pointer;
     background-color: darken(@btn-color, 5%);
   }
-  
-  
-  
+}
+
+/*Оформление форм*/
+.form {
+  margin: 0;
+
+
+  /*pole dl vvoda*/
+  &-input {
+    display: block;
+    margin: 2rem 0;
+    width: 100%;
+
+    border: 1px solid @border-input;
+    border-radius: 5px;
+    padding: 1.8rem;
+  }
+
+  /*пописи к полям*/
+
+  label {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    padding: 0.5rem;
+    font-size: 1.3rem;
+    background-color: @light;
+  }
+  /*кнопка*/
+  &-btn {
+    display: block;
+    height: 5.5rem;
+    width: 100%;
+    font-size: 1.6rem;
+    white-space: nowrap;
+  }
 }
 /* Typography */
 select {
@@ -83,15 +119,15 @@ select {
 
 .section-header {
   &_light {
-    color:@light;
+    color: @light;
   }
   h2 {
     .bold();
     font-size: 3.6rem;
   }
- p {
-   font-size: 2rem;
- }
+  p {
+    font-size: 2rem;
+  }
   margin: 7rem 0 10rem;
   text-align: center;
 }
@@ -155,35 +191,7 @@ select {
         font-size: 1.9rem;
       }
     }
-    /*pole dl vvoda*/
-    &-input {
-      display: block;
-      margin: 2rem 0;
-      width: 100%;
-
-      border: 1px solid @border-input;
-      border-radius: 5px;
-      padding: 1.8rem;
-    }
-
-    /*пописи к полям*/
-
-    label {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%) translateY(-50%);
-      padding: 0.5rem;
-      font-size: 1.3rem;
-      background-color: @light;
-    }
-    /*кнопка*/
-    &-btn {
-      display: block;
-      height: 5.5rem;
-      width: 100%;
-      font-size: 1.6rem;
-      white-space: nowrap;
-    }
+    
 
     /*подписи под кнопкой*/
     small {
@@ -229,20 +237,20 @@ select {
 }
 
 .features {
-margin-bottom: 5rem;
+  margin-bottom: 5rem;
   &-block {
-text-align: center;
+    text-align: center;
 
-h3{
-  font-size: 2rem;
-  margin-bottom: 3rem;
-  .bold();
-}
-p {
-  font-size: 1.6rem;
-  width: 90%;
-  display: inline-block;
-}
+    h3 {
+      font-size: 2rem;
+      margin-bottom: 3rem;
+      .bold();
+    }
+    p {
+      font-size: 1.6rem;
+      width: 90%;
+      display: inline-block;
+    }
   }
   &-img {
     height: 8rem;
@@ -250,30 +258,27 @@ p {
     img {
       display: block;
       margin: 0 auto;
-      
     }
-    
   }
 }
 .slick-active {
-outline: none;
+  outline: none;
 }
 .arrow {
   top: 50%;
   transform: scaleY(-50%);
   z-index: 99;
   width: 5rem;
-  height: 5rem ;
+  height: 5rem;
   border: none;
   position: absolute;
-  opacity: 0.5 ; 
-  
+  opacity: 0.5;
 }
 .prev {
   background: url(/src/img/arrow-left.png) center no-repeat;
   left: 0;
   background-size: 70%;
-  color:@btn-color;
+  color: @btn-color;
 }
 .next {
   background: url(/src/img/arrow-right.png) center no-repeat;
@@ -283,7 +288,7 @@ outline: none;
 
 /*Секция с ценами*/
 .price {
-  background: #036ffc url(/src/img/price-bg.jpg)  center;
+  background: #036ffc url(/src/img/price-bg.jpg) center;
   &-header-btn {
     margin-top: 7rem;
   }
@@ -297,20 +302,20 @@ outline: none;
     box-shadow: 7px 12px 21px 0px rgba(0, 0, 0, 0.17);
     text-align: center;
     min-height: 50rem;
-    h4{
+    margin-bottom: 3rem;
+    h4 {
       margin: 3rem 0;
       font-size: 1.9rem;
-      .bold()
+      .bold();
     }
     img {
       width: 100%;
-      max-width:30rem;
+      max-width: 30rem;
       display: inline-block;
       margin-bottom: 2rem;
-
     }
   }
-  &-tag{
+  &-tag {
     display: block;
     margin-bottom: 2rem;
     font-size: 1.9rem;
@@ -324,7 +329,7 @@ outline: none;
     line-height: 1.6rem;
     li {
       &:before {
-        content: '\2714';
+        content: "\2714";
         display: inline-block;
         width: 2.5rem;
         height: 2.5rem;
@@ -336,6 +341,99 @@ outline: none;
   }
 }
 
+/*Секция с отзывами*/
+.feedback {
+  position: relative;
+  background: url(/src/img/feedback/feedback-bg.jpg) no-repeat center;
+  background-size: cover;
+  &-prev-btn {
+    left: -4rem;
+    
+    
+  }
+  &-next-btn {
+      right: -4rem;
+      
+    }
+  &-text {
+    margin-top: 2rem;
+    padding: 1rem;
+    border: 2px solid @icons-color;
+    font-style: italic;
+    position: relative;
+    &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -2rem;
+    left: 4rem;
+    width: 2rem;
+    height: 2rem;
+    background-color: @light;
+    border: 2px solid @icons-color;
+    border-bottom: none;
+    border-top-right-radius: 100px;
+    
+
+    }
+  } 
+  &-slider {
+    padding: 5rem 6rem;
+    background-color: @light;
+    box-shadow: 6px 10px 10px 0px rgba(0, 0, 0, 0.11);
+    margin-bottom: 5rem;
+    .media {
+      margin-top: 3rem;
+      font-size: 1.4rem;
+      h4 {
+        .bold();
+      }
+    }
+    p {
+      font-size: 1.6rem;
+    }
+    &-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 5rem;
+      
+      border: none;
+      img {
+       width: 100%;
+       
+      }
+    }
+  }
+
+  /*оформление обратной формы*/
+  &-form {
+    margin-top: 5rem;
+    padding: 4rem 10rem;
+    background-color: @light; 
+    text-align: center;
+    h3 {
+      margin-bottom: 2rem;
+      .bold();
+      font-size: 1.6rem;}
+    label {
+      transform: translate(-50%, 8px);
+      
+    }
+    
+  }
+  &-btn {
+    max-width: 30rem;
+    margin: auto;
+  }
+
+}
+.hand {
+  position: absolute;
+  bottom: 0;
+  left: 5rem;
+  max-width: 30rem;
+}
 
 /*Оформление модальных окон*/
 .popup {
@@ -350,15 +448,15 @@ outline: none;
   z-index: 9;
   background-color: rgba(0, 0, 0, 0.5);
 
- &-content {
-   position: fixed;
-  top: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 4rem 6rem;
-  background-color: @light;
-  text-align: center;
- }
+  &-content {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 4rem 6rem;
+    background-color: @light;
+    text-align: center;
+  }
   &-form {
     margin-top: 3rem;
     padding: 0;
@@ -379,9 +477,56 @@ outline: none;
   }
 }
 
+
+@media (max-width: 1199px) {
+.feedback {
+  &-form {
+    padding: 3rem 5rem;
+  }
+}
+.fotorama {
+  margin-bottom: 3rem;
+}
+.hand {
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  max-width: 20rem;
+}
+
+.price {
+  
+  &-header-btn {
+    margin-top: 7rem;
+  }
+  &-button {
+    text-align: right;
+  }
+  /*Карточки с тарифами*/
+  &-block {
+    padding: 2rem 3rem 4rem;
+    background-color: @light;
+    box-shadow: 7px 12px 21px 0px rgba(0, 0, 0, 0.17);
+    text-align: center;
+    min-height: 50rem;
+    margin-bottom: 3rem;
+    h4 {
+      
+      min-height: 6rem;
+    }
+    
+  }
+  
+  
+  }
+}
+
+
+
+
 @media (max-width: 991px) {
   .main {
-    background-position:top  ;
+    background-position: top;
   }
   .phone-block {
     text-align: center;
@@ -393,7 +538,6 @@ outline: none;
   .main-title {
     font-size: 1rem;
     padding-bottom: 3rem;
-   
   }
   .left-arrow {
     position: absolute;
@@ -406,44 +550,81 @@ outline: none;
       text-align: center;
       padding: 3rem 4rem;
     }
-    &-header-btn  {
-      margin-top: 2rem;
-      margin-bottom: 2rem;
+    
+    &-header-btn {
+      
+      padding: 1rem 2rem;
+      
     }
-  &-block {
-    margin-top: 4rem;
+    &-block {
+      margin-top: 4rem;
+    }
+    .section-header_light {
+      margin-bottom: 0;
+    }
+    &-list {
+      padding: 0;
+      list-style: none;
+      min-height: 18rem;
+      font-size: 1.6rem;
+      line-height: 1.6rem;
+      li {
+        &:before {
+          content: "\2714";
+          display: inline-block;
+          width: 2.5rem;
+          height: 2.5rem;
+          vertical-align: middle;
+          color: rgb(5, 204, 5);
+          .bold();
+        }
+      }
+    }
+    &-block {
+      padding: 1rem 1.5rem 4rem;
+      
+      }
   }
-  .section-header_light {
-    margin-bottom: 0;
-  }}
+  .feedback-form  {
+    
+    padding: 0rem 0rem;
+   
+    label {
+      white-space: nowrap;
+    }
+  }
 }
 
+@media (max-width: 850px) {
+  .hand {
+    left: 0;
+  }
+}
 
 @media (max-width: 767px) {
-  
-  
   .main-content {
     margin-top: 5rem;
     font-size: 1rem;
   }
   .main-title {
     h1 {
-    font-size: 2rem;
-    padding: 1rem;
-    margin-top: 4rem;
+      font-size: 2rem;
+      padding: 1rem;
+      margin-top: 4rem;
     }
     p {
       font-size: 2rem;
-    padding: 1rem;
-    margin-top: 2rem;}
+      padding: 1rem;
+      margin-top: 2rem;
+    }
   }
-  
+
   .left-arrow {
     position: absolute;
     top: 50%;
     left: 0;
     -webkit-transform: scaleY(-50%);
-            transform: scaleY(-50%);
+    transform: scaleY(-50%);
   }
   .price-button {
     text-align: center;
@@ -452,22 +633,73 @@ outline: none;
   .price-header-btn {
     margin-top: 2rem;
     margin-bottom: 2rem;
-  
-    
   }
   .price-block {
     margin-top: 2rem;
   }
-  .price .section-header_light {
+  .price-section-header_light {
     margin-bottom: 0;
-  } 
-}
-  /*
-  .header {
-    text-align: center;
   }
-  .wrap-block {
+  .hand {
+    display: none;
+  }
+  .feedback {
+    
+    &-prev-btn {
+      left: 0rem;
+      
+      
+    }
+    &-next-btn {
+        right: 0rem;
+        
+      }
+   }
+}
+
+@media (max-width: 575px ){
+  .main-content {
+    margin-top: 13rem;
+    font-size: 0.5rem;
+  }
+  .main-title {
+    h1 {
+      font-size: 1.4rem;
+      padding: 1rem;
+      margin-top: 4rem;
+      line-height: 2rem;
+      &:before {
+        content: "\2022";
+        display: inline-block;
+        width: 2.5rem;
+        height: 2.5rem;
+        .bold();
+    }}
+    p {
+      font-size: 1.4rem;
+      padding: 1rem;
+      margin-top: 0rem;
+      .bold();
+      &:before {
+        content: "\2022";
+        display: inline-block;
+        width: 2.5rem;
+        height: 2.5rem;
+        .bold();
+      }
+    }
+  }
+  .phone-block {
     text-align: center;
+    margin-top: 1rem;
+  }
+  .main {
+    &-trigger {
+      display: none;
+    }
+  span {
+    display: none;
   }
 }
-*/
+  
+}
