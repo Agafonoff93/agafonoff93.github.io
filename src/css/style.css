@@ -373,6 +373,9 @@ select {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
+.feedback-slider .media img {
+  width: 64px;
+}
 .feedback-slider p {
   font-size: 1.6rem;
 }
@@ -648,7 +651,7 @@ select {
 }
 /*Офрмление подвала footer*/
 footer {
-  padding: 4rem;
+  padding: 7rem;
 }
 footer .footer-contacts {
   text-align: center;
@@ -660,6 +663,7 @@ footer .footer-contacts p {
 footer .footer-dev-logo {
   text-align: right;
   padding-top: 0.5rem;
+  margin: 0;
 }
 /*Оформление модальных окон*/
 .popup {
