@@ -8,6 +8,7 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
+  margin-bottom: 20rem;
 }
 a:hover {
   text-decoration: none;
@@ -66,6 +67,14 @@ textarea:focus {
   /*кнопка*/
 }
 .form-input {
+  display: block;
+  margin: 2rem 0;
+  width: 100%;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  padding: 1.8rem;
+}
+.form-textarea {
   display: block;
   margin: 2rem 0;
   width: 100%;
@@ -337,7 +346,7 @@ select {
   position: relative;
 }
 .feedback-text::before {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   top: -2rem;
@@ -403,6 +412,254 @@ select {
   bottom: 0;
   left: 5rem;
   max-width: 30rem;
+}
+/*Схема работы*/
+.scheme {
+  background: #ffffff url(../img/schema-bg.jpg) bottom right no-repeat;
+  background-size: 90%;
+}
+.scheme-block {
+  min-height: 30rem;
+}
+.scheme-block h3 {
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+/*Все на 100% включено*/
+.all-inclusive {
+  background: #f5f5f5;
+}
+.all-inclusive .section-header_active {
+  margin-top: -5rem;
+}
+.all-inclusive .section-header_active h2 {
+  padding: 4rem 0;
+}
+.all-inclusive .media {
+  min-height: 9rem;
+}
+.all-inclusive .media h4 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+.all-inclusive .media p {
+  font-size: 1.1rem;
+}
+.circle {
+  display: inline-block;
+  background-color: #46b814;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.circle-border {
+  padding: 0.4rem;
+  display: inline-block;
+  width: 5rem;
+  height: 5rem;
+  min-width: 5rem;
+  border: 3px solid #46b814;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 4rem;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+}
+/*мы развеем всек сомнения*/
+.problems {
+  position: relative;
+}
+.problems-man {
+  position: absolute ;
+  width: 30rem;
+  bottom: 0;
+  left: 50%;
+  margin-left: -15rem;
+  margin-bottom: -10rem;
+}
+.problems-list {
+  border: 4px solid ;
+  padding: 2rem;
+  min-height: 28rem;
+}
+.problems-list h4 {
+  font-size: 2.1rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+.problems-list ul {
+  padding: 2rem;
+  list-style: none;
+}
+.problems-list ul li {
+  padding-left: 3.5rem;
+  position: relative;
+  margin-bottom: 3rem;
+}
+.problems-list ul li:before {
+  content: '\2714';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 3rem;
+  height: 3rem;
+  font-size: 2.5rem;
+}
+.problems-list_bad {
+  border-color: #66666c;
+}
+.problems-list_bad h4 {
+  opacity: 0.5;
+}
+.problems-list_bad ul li:before {
+  content: "X";
+  color: #ff0000;
+}
+.problems-list_good {
+  border-color: #46b814;
+}
+.problems-list_good ul li:before {
+  color: #46b814;
+}
+.materials {
+  margin-top: 25rem;
+}
+.materials p {
+  margin: 3rem 0rem;
+}
+.materials_block {
+  text-align: center;
+}
+.materials_block img {
+  min-height: 16rem;
+}
+.materials_block h5 {
+  color: #46b814;
+}
+.materials_contacts {
+  margin: 4rem 0rem;
+  text-align: center;
+}
+.materials {
+  background: #ffffff url(/src/img/feedback/feedback-bg.jpg) center no-repeat;
+  background-size: cover;
+  margin-bottom: 5rem;
+}
+.materials-block {
+  text-align: center;
+}
+.materials-block h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+.materials-block p {
+  font-size: 1.6rem;
+  width: 90%;
+  display: inline-block;
+}
+.materials-img {
+  height: 8rem;
+  margin-bottom: 7rem;
+}
+.materials-img img {
+  display: block;
+  margin: 0 auto;
+}
+.materials-link {
+  color: #46b814;
+  border-bottom: 1px dotted #46b814;
+}
+.materials-link:hover {
+  color: #348a0f;
+}
+.materials_contacts span {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+.tour {
+  -webkit-box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.308);
+          box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.308);
+  background: url(/src/img/bg-tour.jpg) center no-repeat;
+  background-size: cover;
+  padding: 5rem 5rem ;
+}
+.tour-btn {
+  font-size: 1.3rem;
+  padding: 1rem 1rem ;
+}
+/*Дополнительные услуги*/
+.upsell {
+  background: #036ffc;
+  padding-top: 0.5rem;
+}
+.upsell-block {
+  min-height: 30rem;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 3rem;
+}
+.upsell-blocks {
+  margin-top: 3rem;
+}
+.upsell-block img {
+  display: inline-block;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 30rem;
+}
+.upsell-block p {
+  font-size: 2rem;
+}
+/*Контакты*/
+.contacts {
+  background: #ffffff;
+  padding-top: 4rem;
+  /*Заголовок для формы*/
+}
+.contacts h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+.contacts p {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+.contacts-link {
+  display: inline-block;
+  color: #1a1820;
+  border-bottom: 1px dotted #1a1820;
+}
+.contacts-link:hover {
+  color: #020203;
+}
+.contacts-form h2 {
+  font-size: 1.9rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  margin-bottom: 3rem;
+}
+/*Офрмление подвала footer*/
+footer {
+  padding: 4rem;
+}
+footer .footer-contacts {
+  text-align: center;
+  padding-top: 0.5rem;
+}
+footer .footer-contacts p {
+  margin: 0;
+}
+footer .footer-dev-logo {
+  text-align: right;
+  padding-top: 0.5rem;
 }
 /*Оформление модальных окон*/
 .popup {
@@ -542,6 +799,20 @@ select {
   .feedback-form label {
     white-space: nowrap;
   }
+  .all-inclusive .media {
+    min-height: 9rem;
+  }
+  .all-inclusive .media h4 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+  }
+  .all-inclusive .media p {
+    font-size: 1.1rem;
+  }
+  .all-inclusive .media .circle-body {
+    min-width: 5rem;
+  }
 }
 @media (max-width: 850px) {
   .hand {
@@ -592,6 +863,9 @@ select {
   }
   .feedback-next-btn {
     right: 0rem;
+  }
+  .scheme {
+    text-align: center;
   }
 }
 @media (max-width: 575px) {
