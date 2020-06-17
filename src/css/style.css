@@ -52,7 +52,7 @@ textarea:focus {
   padding: 1rem 3rem;
   border-radius: 8px;
   font-size: 1rem;
-  background-color: #3ad654;
+  background-color: #c51515;
   color: #ffffff;
   text-transform: uppercase;
   border: none;
@@ -62,7 +62,7 @@ textarea:focus {
 }
 .button:hover {
   cursor: pointer;
-  background-color: #2acc45;
+  background-color: #ae1313;
 }
 /*Оформление форм*/
 .form {
@@ -223,6 +223,11 @@ select {
   height: 7rem;
   line-height: 7rem;
 }
+.head_info_social img {
+  width: 3rem;
+  height: 3rem;
+  margin-left: 0.5rem;
+}
 .features {
   margin-bottom: 5rem;
 }
@@ -266,7 +271,7 @@ select {
   background: url(/src/img/arrow-left.png) center no-repeat;
   left: 0;
   background-size: 70%;
-  color: #3ad654;
+  color: #c51515;
 }
 .next {
   background: url(/src/img/arrow-right.png) center no-repeat;
@@ -880,7 +885,7 @@ footer .footer-dev-logo {
 }
 @media (max-width: 575px) {
   .main-content {
-    margin-top: 13rem;
+    margin-top: 0rem;
     font-size: 0.5rem;
   }
   .main-title h1 {
@@ -935,6 +940,43 @@ footer .footer-dev-logo {
   }
 }
 @media (max-width: 456px) {
+  .logo {
+    display: inline-block;
+  }
+  .logo logo-h1 {
+    display: none;
+  }
+  .phone-block {
+    text-align: right;
+    white-space: nowrap;
+    margin-right: 0rem;
+  }
+  .phone-link {
+    display: inline-block;
+    color: #1a1820;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    height: 3rem;
+    line-height: 0rem;
+  }
+  .header {
+    height: 7rem;
+    margin-bottom: 5rem;
+  }
+  .text-rigth {
+    text-align: right;
+  }
+  .wrap {
+    display: table;
+    width: 100%;
+    height: 7rem;
+  }
+  .wrap-block {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+  }
   .main-content {
     margin-top: 22rem;
     font-size: 0.5rem;
