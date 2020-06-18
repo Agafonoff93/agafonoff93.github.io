@@ -62,7 +62,7 @@ textarea:focus {
 }
 .button:hover {
   cursor: pointer;
-  background-color: #ae1313;
+  background-color: #a01111;
 }
 /*Оформление форм*/
 .form {
@@ -129,26 +129,33 @@ select {
   background: #ffffff url(/src/img/avtobc.jpg) center center no-repeat;
   background-size: cover;
   /*Подзаголовок*/
+  /* &-subtitle {
+    margin-top: -8rem;
+    
+    margin-bottom: 4rem;
+    font-size: 2.4rem;
+  }*/
   /*Зеленый ярлык*/
   /*оплата по факту*/
   /*Главная форма*/
+}
+.main-title {
+  background-color: #000;
 }
 .main-content {
   margin-top: 10rem;
   /*Главный заголовок*/
 }
 .main-content h1 {
-  margin-top: 2rem;
-  margin-bottom: 4rem;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 2.8rem;
-  line-height: 4rem;
-  text-transform: uppercase;
-}
-.main-subtitle {
-  margin-bottom: 4rem;
-  font-size: 2.4rem;
+  /*
+      margin-top: 2rem;
+      margin-bottom: 4rem;
+      .bold();
+      font-size: 2.8rem;
+      line-height: 4rem;
+      text-transform: uppercase;
+      
+      */
 }
 .main span {
   display: inline-block;
@@ -885,8 +892,15 @@ footer .footer-dev-logo {
 }
 @media (max-width: 575px) {
   .main-content {
-    margin-top: 0rem;
+    margin-top: 4rem;
     font-size: 0.5rem;
+  }
+  .main-content .col-12 {
+    padding: 0rem 0rem;
+  }
+  .main-title {
+    margin-top: 6.5rem;
+    margin-bottom: 3rem;
   }
   .main-title h1 {
     font-size: 1.4rem;
@@ -894,26 +908,10 @@ footer .footer-dev-logo {
     margin-top: 4rem;
     line-height: 2rem;
   }
-  .main-title h1:before {
-    content: "\2022";
-    display: inline-block;
-    width: 2.5rem;
-    height: 2.5rem;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-  }
   .main-title p {
     font-size: 1.4rem;
     padding: 1rem;
     margin-top: 0rem;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-  }
-  .main-title p:before {
-    content: "\2022";
-    display: inline-block;
-    width: 2.5rem;
-    height: 2.5rem;
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
   }
@@ -926,6 +924,7 @@ footer .footer-dev-logo {
     display: table;
     width: 100%;
     height: 7rem;
+    padding: 3rem 0;
   }
   .wrap-block {
     display: table-cell;
@@ -978,35 +977,18 @@ footer .footer-dev-logo {
     text-align: right;
   }
   .main-content {
-    margin-top: 6rem;
     font-size: 0.5rem;
   }
   .main-title h1 {
     font-size: 1.4rem;
     padding: 1rem;
-    margin: 4rem 0rem 0rem 0rem;
+    margin: 6rem 0rem 0rem 0rem;
     line-height: 2rem;
-  }
-  .main-title h1:before {
-    content: "\2022";
-    display: inline-block;
-    width: 2.5rem;
-    height: 2.5rem;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
   }
   .main-title p {
     font-size: 1.4rem;
     padding: 1rem;
     margin-top: 0rem;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-  }
-  .main-title p:before {
-    content: "\2022";
-    display: inline-block;
-    width: 2.5rem;
-    height: 2.5rem;
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
   }

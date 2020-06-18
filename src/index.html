@@ -61,23 +61,27 @@
       </div>
       <div class="main-content ">
         <div class="row">
-          <div class="col-lg col-md-6 col-sm-12 col-12">
-            <div class="main-title wow animate__animated animate__fadeInLeft ">
-              <h1>
-                ШУМОИЗОЛЯЦИЯ ВАШЕГО АВТОМОБИЛЯ <br>
-                АКУСТИЧЕСКОЕ ОФОРМЛЕНИЕ <br>Изготовление эксклюзивных дверных карт и подиумов
+          <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+            <div class="main-title">
+              <div class="main-slider">
+                <div class="main-slider-skils"><img src="/src/img/feedback/1.jpg" alt=""></div>
+                <div class="main-slider-skils"><img src="/src/img/feedback/2.jpg" alt=""></div>
+                <div class="main-slider-skils"><img src="/src/img/feedback/3.jpg" alt=""></div>
+                <div class="main-slider-skils"><img src="/src/img/feedback/4.jpg" alt=""></div>
+                <div class="main-slider-skils"><img src="/src/img/feedback/5.jpg" alt=""></div>
+
+              </div>
+              <!--<h1>
+               
 
               </h1>
               <p class="main-subtitle">
-                ХИМЧИСТКА
-                <br />
-                ПОЛИРОВКА ФАР
+                
               </p>
-              <span>стоимость работ <br />
-                от <strong>999</strong> руб <br />с материалом<sup></sup></span>
+              <span></span>
               <strong class="main-trigger">
                 оплата по факту!
-              </strong>
+              </strong>-->
             </div>
           </div>
           <div class="col-lg-4 offset-lg-2 col-md-5 offset-md-0 col-sm-8 offset-sm-2">
@@ -886,6 +890,41 @@
           '<button type="button" class="feedback-slider-btn feedback-prev-btn"><img src="img/feedback/prevarrow.png" alt=""/></button>',
         nextArrow:
           '<button type="button" class="feedback-slider-btn feedback-next-btn"><img src="img/feedback/nextarrow.png" alt=""/></button>',
+      });
+
+
+      /*Слайдер с умениями*/
+      $(".main-slider").slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        dots: true,
+        speed: 1000,
+        infinite: true,
+        fade: true,
+        adaptiveHeight: true,
+        responsive: [
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToShow: 2,
+              prevArrow: '<button class="prev arrow" > </button>',
+              nextArrow: '<button class="next arrow" > </button>',
+              slidesToScroll: 2,
+            },
+          },
+          {
+            breakpoint: 767,
+            settings: {
+              slidesToShow: 1,
+              prevArrow: '<button class="prev arrow" > </button>',
+              nextArrow: '<button class="next arrow" > </button>',
+              slidesToScroll: 1,
+            },
+          },
+        ],
       });
 
       /*Слайдер с преимуществами*/
