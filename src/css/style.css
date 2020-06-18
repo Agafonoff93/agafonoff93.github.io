@@ -914,8 +914,8 @@ footer .footer-dev-logo {
   }
   .main-menu-mobile {
     display: block;
-    padding: 0.5rem 0rem;
-    margin: 1.2rem 0rem;
+    padding: 1rem 0rem;
+    margin: 2rem 0rem;
     background-color: #fff;
     text-align: center;
     font-size: 1rem;
@@ -931,6 +931,7 @@ footer .footer-dev-logo {
   .main-menu-mobile a {
     margin: 0 20%;
     color: #333333;
+    font-size: 1.5rem;
   }
   .main-menu-mobile a:hover {
     cursor: pointer;
@@ -942,7 +943,7 @@ footer .footer-dev-logo {
   }
   .main-title {
     border-top: solid #c51515;
-    margin-top: 9rem;
+    margin-top: 13rem;
     margin-bottom: 3rem;
   }
   .main-title h1 {
@@ -966,8 +967,12 @@ footer .footer-dev-logo {
   .wrap {
     display: block;
     width: 100%;
+    padding: 0;
+    margin: 0;
   }
   .wrap-block {
+    padding: 0;
+    margin: 0;
     text-align: center;
   }
   .main-trigger {
