@@ -139,8 +139,11 @@ select {
   /*оплата по факту*/
   /*Главная форма*/
 }
-.main-title {
-  background-color: #000;
+.main-slider img {
+  width: 100%;
+}
+.main-menu-mobile {
+  display: none;
 }
 .main-content {
   margin-top: 10rem;
@@ -273,6 +276,17 @@ select {
   border: none;
   position: absolute;
   opacity: 0.5;
+}
+.prev-g {
+  background: url(/src/img/arrow-left-g.png) center no-repeat;
+  left: 0;
+  background-size: 70%;
+  color: #c51515;
+}
+.next-g {
+  background: url(/src/img/arrow-right-g.png) center no-repeat;
+  right: 0;
+  background-size: 70%;
 }
 .prev {
   background: url(/src/img/arrow-left.png) center no-repeat;
@@ -898,8 +912,37 @@ footer .footer-dev-logo {
   .main-content .col-12 {
     padding: 0rem 0rem;
   }
+  .main-menu-mobile {
+    display: block;
+    padding: 0.5rem 0rem;
+    margin: 1.2rem 0rem;
+    background-color: #fff;
+    text-align: center;
+    font-size: 1rem;
+    width: 100%;
+    color: #333333;
+    text-transform: uppercase;
+    border-top: solid 1px #333333;
+    border-bottom: solid 1px #333333;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+  .main-menu-mobile a {
+    margin: 0 20%;
+    color: #333333;
+  }
+  .main-menu-mobile a:hover {
+    cursor: pointer;
+    color: black;
+  }
+  .main-menu-mobile:hover {
+    cursor: pointer;
+    background-color: #a01111;
+  }
   .main-title {
-    margin-top: 6.5rem;
+    border-top: solid #c51515;
+    margin-top: 9rem;
     margin-bottom: 3rem;
   }
   .main-title h1 {
@@ -921,14 +964,10 @@ footer .footer-dev-logo {
     width: 100%;
   }
   .wrap {
-    display: table;
+    display: block;
     width: 100%;
-    height: 7rem;
-    padding: 3rem 0;
   }
   .wrap-block {
-    display: table-cell;
-    vertical-align: middle;
     text-align: center;
   }
   .main-trigger {
@@ -967,14 +1006,11 @@ footer .footer-dev-logo {
     text-align: right;
   }
   .wrap {
-    display: table;
+    text-align: center;
     width: 100%;
-    height: 7rem;
   }
   .wrap-block {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: right;
+    text-align: center;
   }
   .main-content {
     font-size: 0.5rem;
