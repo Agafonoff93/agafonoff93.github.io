@@ -56,7 +56,6 @@ textarea:focus {
   color: #ffffff;
   text-transform: uppercase;
   border: none;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
   white-space: nowrap;
 }
@@ -91,8 +90,7 @@ textarea:focus {
 .form label {
   position: absolute;
   left: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-          transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
   padding: 0.5rem;
   font-size: 1.3rem;
   background-color: #ffffff;
@@ -123,6 +121,9 @@ select {
 .section-header p {
   font-size: 2rem;
 }
+.cmn-toggle-switch {
+  display: none;
+}
 /* main */
 .main {
   padding: 3rem 0;
@@ -142,11 +143,26 @@ select {
 .main-slider img {
   width: 100%;
 }
-.main-menu-mobile {
-  display: none;
+.main-menu {
+  border-top: solid 1px #333333;
+  border-bottom: solid 1px #333333;
+  margin-top: 2.5rem;
+  white-space: nowrap;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+.main-menu .navbar-light .navbar-nav .nav-link {
+  color: #333333;
+}
+.main-menu .navbar-light .navbar-nav .nav-link:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.main-menu .navbar {
+  padding: 0;
 }
 .main-content {
-  margin-top: 10rem;
+  padding-top: 7rem;
   /*Главный заголовок*/
 }
 .main-content h1 {
@@ -159,20 +175,6 @@ select {
       text-transform: uppercase;
       
       */
-}
-.main span {
-  display: inline-block;
-  padding: 3rem 5rem;
-  font-size: 1.8rem;
-  color: #ffffff;
-  background-color: #46b814;
-  text-align: center;
-  /*300 руб*/
-}
-.main span strong {
-  font-size: 3rem;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
 }
 .main-trigger {
   font-size: 2.2rem;
@@ -202,6 +204,11 @@ select {
   display: block;
   margin-top: 1.5em;
 }
+/*свойства слайдера*/
+.slick-track {
+  opacity: 1;
+  min-width: 300px;
+}
 .header {
   height: 7rem;
   margin-bottom: 5rem;
@@ -222,7 +229,6 @@ select {
 .phone-block {
   text-align: right;
   white-space: nowrap;
-  margin-right: 6rem;
 }
 .phone-link {
   display: inline-block;
@@ -268,8 +274,7 @@ select {
 }
 .arrow {
   top: 50%;
-  -webkit-transform: scaleY(-50%);
-          transform: scaleY(-50%);
+  transform: scaleY(-50%);
   z-index: 99;
   width: 5rem;
   height: 5rem;
@@ -299,6 +304,90 @@ select {
   right: 0;
   background-size: 70%;
 }
+/*Секция с ценами автозвук*/
+.sound {
+  background: #333333 url(/src/img/price-bg.jpg) center;
+}
+.sound-block {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  background-color: #ffffff;
+  box-sizing: 7px 12px 12px 0px rgba(0, 0, 0, 0.17);
+  text-align: left;
+  min-height: 13rem;
+  box-shadow: inset 0 0 32px rgba(73, 73, 73, 0.16);
+}
+.sound-block h4 {
+  font-size: 2rem;
+  height: 8rem;
+  text-align: left;
+}
+.sound-block p {
+  font-size: 2rem;
+}
+.sound-block button {
+  z-index: 900;
+  position: relative;
+}
+.sound-block-image {
+  z-index: 100;
+  position: absolute;
+  right: 0rem;
+  top: 1rem;
+}
+.sound .service {
+  text-align: center;
+  font-size: 2rem;
+  color: #ffffff;
+  margin: 4rem 0;
+}
+.sound .service-button {
+  margin: 3rem 0 ;
+}
+/*Секция с ценами шумоизоляция*/
+.insulation {
+  background: #333333 url(/src/img/feedback/feedback-bg.jpg) center;
+}
+.insulation-block {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  background-color: #ffffff;
+  box-sizing: 7px 12px 12px 0px rgba(0, 0, 0, 0.17);
+  text-align: left;
+  min-height: 13rem;
+  box-shadow: inset 0 0 32px rgba(73, 73, 73, 0.16);
+}
+.insulation-block h4 {
+  font-size: 2rem;
+  height: 8rem;
+  text-align: left;
+}
+.insulation-block p {
+  font-size: 2rem;
+}
+.insulation-block button {
+  z-index: 900;
+  position: relative;
+}
+.insulation-block-image {
+  z-index: 100;
+  position: absolute;
+  right: 0rem;
+  top: 1rem;
+}
+.insulation .service {
+  text-align: center;
+  font-size: 2rem;
+  color: #1a1820;
+  margin: 4rem 0;
+}
+.insulation .service-button {
+  margin: 3rem 0 ;
+}
 /*Секция с ценами*/
 .price {
   background: #036ffc url(/src/img/price-bg.jpg) center;
@@ -313,8 +402,7 @@ select {
 .price-block {
   padding: 2rem 3rem 4rem;
   background-color: #ffffff;
-  -webkit-box-shadow: 7px 12px 21px 0px rgba(0, 0, 0, 0.17);
-          box-shadow: 7px 12px 21px 0px rgba(0, 0, 0, 0.17);
+  box-shadow: 7px 12px 21px 0px rgba(0, 0, 0, 0.17);
   text-align: center;
   min-height: 50rem;
   margin-bottom: 3rem;
@@ -393,8 +481,7 @@ select {
 .feedback-slider {
   padding: 5rem 6rem;
   background-color: #ffffff;
-  -webkit-box-shadow: 6px 10px 10px 0px rgba(0, 0, 0, 0.11);
-          box-shadow: 6px 10px 10px 0px rgba(0, 0, 0, 0.11);
+  box-shadow: 6px 10px 10px 0px rgba(0, 0, 0, 0.11);
   margin-bottom: 5rem;
 }
 .feedback-slider .media {
@@ -414,8 +501,7 @@ select {
 .feedback-slider-btn {
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   width: 4rem;
   border: none;
 }
@@ -435,8 +521,7 @@ select {
   font-size: 1.6rem;
 }
 .feedback-form label {
-  -webkit-transform: translate(-50%, 8px);
-          transform: translate(-50%, 8px);
+  transform: translate(-50%, 8px);
 }
 .feedback-btn {
   max-width: 30rem;
@@ -540,8 +625,7 @@ select {
   position: absolute;
   left: 0;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   width: 3rem;
   height: 3rem;
   font-size: 2.5rem;
@@ -620,8 +704,7 @@ select {
   font-weight: 700;
 }
 .tour {
-  -webkit-box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.308);
-          box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.308);
+  box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.308);
   background: url(/src/img/bg-tour.jpg) center no-repeat;
   background-size: cover;
   padding: 5rem 5rem ;
@@ -632,7 +715,7 @@ select {
 }
 /*Дополнительные услуги*/
 .upsell {
-  background: #036ffc;
+  background: #333333;
   padding-top: 0.5rem;
 }
 .upsell-block {
@@ -714,8 +797,7 @@ footer .footer-dev-logo {
   position: fixed;
   top: 10%;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   padding: 4rem 6rem;
   background-color: #ffffff;
   text-align: center;
@@ -740,6 +822,9 @@ footer .footer-dev-logo {
   font-weight: 700;
 }
 @media (max-width: 1199px) {
+  .phone-block {
+    text-align: left;
+  }
   .feedback-form {
     padding: 3rem 5rem;
   }
@@ -764,8 +849,7 @@ footer .footer-dev-logo {
   .price-block {
     padding: 2rem 3rem 4rem;
     background-color: #ffffff;
-    -webkit-box-shadow: 7px 12px 21px 0px rgba(0, 0, 0, 0.17);
-            box-shadow: 7px 12px 21px 0px rgba(0, 0, 0, 0.17);
+    box-shadow: 7px 12px 21px 0px rgba(0, 0, 0, 0.17);
     text-align: center;
     min-height: 50rem;
     margin-bottom: 3rem;
@@ -778,11 +862,21 @@ footer .footer-dev-logo {
   .main {
     background-position: top;
   }
+  .main-menu {
+    margin-top: 2rem;
+  }
+  .main-form {
+    padding: 3rem;
+  }
+  .main-form-header h2 {
+    font-size: 1.5rem;
+  }
   .phone-block {
     text-align: center;
+    margin-right: 3rem;
   }
   .main-content {
-    margin-top: 5rem;
+    margin-top: 10rem;
     font-size: 1rem;
   }
   .main-title {
@@ -793,8 +887,7 @@ footer .footer-dev-logo {
     position: absolute;
     top: 50%;
     left: 0;
-    -webkit-transform: scaleY(-50%);
-            transform: scaleY(-50%);
+    transform: scaleY(-50%);
   }
   .price-button {
     text-align: center;
@@ -856,18 +949,7 @@ footer .footer-dev-logo {
   }
 }
 @media (max-width: 767px) {
-  .main-content {
-    margin-top: 5rem;
-    font-size: 1rem;
-  }
-  .main-title h1 {
-    font-size: 2rem;
-    padding: 1rem;
-    margin-top: 4rem;
-  }
-  .main-title p {
-    font-size: 2rem;
-    padding: 1rem;
+  .main-menu {
     margin-top: 2rem;
   }
   .left-arrow {
@@ -905,6 +987,101 @@ footer .footer-dev-logo {
   }
 }
 @media (max-width: 575px) {
+  /* бурргер Х*/
+  .cmn-toggle-switch {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 40px;
+    height: 35px;
+    font-size: 0;
+    text-indent: -9999px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-shadow: none;
+    border-radius: 5px;
+    border: solid white 2px;
+    cursor: pointer;
+    -webkit-transition: background 0.3s;
+    transition: background 0.3s;
+  }
+  .cmn-toggle-switch:focus {
+    outline: none;
+  }
+  .cmn-toggle-switch span {
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: 5px;
+    right: 5px;
+    height: 2px;
+    background: white;
+  }
+  .cmn-toggle-switch span::before,
+  .cmn-toggle-switch span::after {
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    content: "";
+  }
+  .cmn-toggle-switch span::before {
+    top: -9px;
+  }
+  .cmn-toggle-switch span::after {
+    bottom: -9px;
+  }
+  .cmn-toggle-switch__htx {
+    background-color: #333333;
+  }
+  .cmn-toggle-switch__htx span {
+    -webkit-transition: background 0 0.3s;
+    transition: background 0 0.3s;
+  }
+  .cmn-toggle-switch__htx span::before,
+  .cmn-toggle-switch__htx span::after {
+    -webkit-transition-duration: 0.3s, 0.3s;
+    transition-duration: 0.3s, 0.3s;
+    -webkit-transition-delay: 0.3s, 0;
+    transition-delay: 0.3s, 0;
+  }
+  .cmn-toggle-switch__htx span::before {
+    -webkit-transition-property: top, -webkit-transform;
+    transition-property: top, transform;
+  }
+  .cmn-toggle-switch__htx span::after {
+    -webkit-transition-property: bottom, -webkit-transform;
+    transition-property: bottom, transform;
+  }
+  /* active state, i.e. menu open */
+  .cmn-toggle-switch__htx.active {
+    background-color: #c51515;
+  }
+  .cmn-toggle-switch__htx.active span {
+    background: none;
+  }
+  .cmn-toggle-switch__htx.active span::before {
+    top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .cmn-toggle-switch__htx.active span::after {
+    bottom: 0;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  .cmn-toggle-switch__htx.active span::before,
+  .cmn-toggle-switch__htx.active span::after {
+    -webkit-transition-delay: 0, 0.3s;
+    transition-delay: 0, 0.3s;
+  }
   .main-content {
     margin-top: 4rem;
     font-size: 0.5rem;
@@ -912,40 +1089,35 @@ footer .footer-dev-logo {
   .main-content .col-12 {
     padding: 0rem 0rem;
   }
-  .main-menu-mobile {
-    display: block;
-    padding: 1rem 0rem;
-    margin-top: 2rem ;
-    margin-bottom: 0.3rem;
-    background-color: #fff;
-    text-align: center;
-    font-size: 1rem;
-    width: 100%;
-    color: #333333;
-    text-transform: uppercase;
+  .header .row .col-12 {
+    padding: 0rem 0rem ;
+  }
+  .main-menu {
+    position: relative;
+    z-index: 1000;
+    background-color: #333333;
     border-top: solid 1px #333333;
     border-bottom: solid 1px #333333;
-    -webkit-transition: all 0.2s;
-    transition: all 0.2s;
+    margin-top: 2.5rem;
     white-space: nowrap;
-  }
-  .main-menu-mobile a {
-    margin: 0 20%;
-    color: #333333;
     font-size: 1.5rem;
+    text-transform: uppercase;
   }
-  .main-menu-mobile a:hover {
-    cursor: pointer;
-    color: black;
-    background-color: #e6e6e6;
+  .main-menu .navbar-light .navbar-nav .nav-link {
+    color: #ffffff;
   }
-  .main-menu-mobile:hover {
-    cursor: pointer;
-    background-color: #a01111;
+  .main-menu .navbar-light .navbar-toggler {
+    border-color: #ffffff;
+    z-index: 1000;
+  }
+  .main-menu .navbar {
+    padding: 0.5rem 1rem;
   }
   .main-title {
+    position: relative;
+    z-index: 1;
     border-top: solid #c51515;
-    margin-top: 13rem;
+    margin-top: 5rem;
     margin-bottom: 3rem;
   }
   .main-title h1 {
@@ -975,11 +1147,111 @@ footer .footer-dev-logo {
     display: table-cell;
     vertical-align: middle;
   }
-  .main-trigger {
-    display: none;
+  /*Секция с ценами автозвук*/
+  .sound {
+    background: #333333 url(/src/img/price-bg.jpg) center;
   }
-  .main span {
-    display: none;
+  .sound .section-header {
+    margin: 1rem;
+  }
+  .sound .section-header h2 {
+    font-size: 2rem;
+  }
+  .sound .section-header p {
+    font-size: 1rem;
+  }
+  .sound-block {
+    position: relative;
+    overflow: hidden;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    background-color: #ffffff;
+    box-sizing: 7px 12px 12px 0px rgba(0, 0, 0, 0.17);
+    text-align: left;
+    min-height: 3rem;
+    box-shadow: inset 0 0 32px rgba(73, 73, 73, 0.16);
+  }
+  .sound-block h4 {
+    font-size: 1.3rem;
+    height: 2rem;
+    text-align: left;
+  }
+  .sound-block p {
+    font-size: 1.4rem;
+  }
+  .sound-block button {
+    z-index: 900;
+    position: relative;
+  }
+  .sound-block-image {
+    z-index: 100;
+    position: absolute;
+    right: 0rem;
+    top: 1rem;
+  }
+  .sound .service {
+    text-align: center;
+    color: #ffffff;
+    margin: 1rem 0;
+  }
+  .sound .service h3 {
+    font-size: 1.3rem;
+  }
+  .sound .service-button {
+    margin: 1rem 0 ;
+  }
+  /*Секция с ценами шумоизоляция*/
+  .insulation {
+    background: #333333 url(/src/img/feedback/feedback-bg.jpg) center;
+  }
+  .insulation .section-header {
+    margin: 1rem;
+  }
+  .insulation .section-header h2 {
+    font-size: 2rem;
+  }
+  .insulation .section-header p {
+    font-size: 1rem;
+  }
+  .insulation-block {
+    position: relative;
+    overflow: hidden;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    background-color: #ffffff;
+    box-sizing: 7px 12px 12px 0px rgba(0, 0, 0, 0.17);
+    text-align: left;
+    min-height: 3rem;
+    box-shadow: inset 0 0 32px rgba(73, 73, 73, 0.16);
+  }
+  .insulation-block h4 {
+    font-size: 1.3rem;
+    height: 2rem;
+    text-align: left;
+  }
+  .insulation-block p {
+    font-size: 1.4rem;
+  }
+  .insulation-block button {
+    z-index: 900;
+    position: relative;
+  }
+  .insulation-block-image {
+    z-index: 100;
+    position: absolute;
+    right: 0rem;
+    top: 1rem;
+  }
+  .insulation .service {
+    text-align: center;
+    margin: 1rem 0;
+    color: #1a1820;
+  }
+  .insulation .service h3 {
+    font-size: 1.3rem;
+  }
+  .insulation .service-button {
+    margin: 1rem 0 ;
   }
 }
 @media (max-width: 456px) {
