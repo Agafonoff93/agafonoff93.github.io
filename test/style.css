@@ -1,11 +1,11 @@
 @font-face {
   font-family: Arial; /* Имя шрифта */
-  src: url(/font/9041.ttf); /* Путь к файлу со шрифтом */
+  src: url(...font/9041.ttf); /* Путь к файлу со шрифтом */
 }
 
 @font-face {
   font-family: "Gotham Pro"; /* Имя шрифта */
-  src: url(/font/14078.ttf); /* Путь к файлу со шрифтом */
+  src: url(...font/14078.ttf); /* Путь к файлу со шрифтом */
 }
 
 html {
