@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.93 24.82">
+  <defs>
+    <style>
+      .cls-yellow-line-1 {
+        fill: #fcd329;
+      }
+
+      .cls-yellow-line-2 {
+        fill: #fae691;
+      }
+    </style>
+  </defs>
+  <title>yellow-line</title>
+  
+        <path class="cls-yellow-line-1" d="M66.93,3.54v16H0v-16A3.54,3.54,0,0,1,3.53,0H63.39A3.54,3.54,0,0,1,66.93,3.54Z"/>
+        <path class="cls-yellow-line-2" d="M66.93,19.52v1.76a3.54,3.54,0,0,1-3.54,3.54H3.53A3.54,3.54,0,0,1,0,21.28V19.52Z"/>
+    
+</svg>
