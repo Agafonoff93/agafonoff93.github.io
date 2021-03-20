@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.9 24.82">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #70a74b;
+      }
+
+      .cls-2 {
+        fill: #b1cc9e;
+      }
+    </style>
+  </defs>
+  <title>green-line (2)</title>
+  <g id="Слой_2" data-name="Слой 2">
+    <g id="Слой_1-2" data-name="Слой 1">
+      <g id="green-line">
+        <path class="cls-1" d="M22.9,3.54v16H0v-16C0,1.59.54,0,1.21,0H21.69C22.36,0,22.9,1.59,22.9,3.54Z"/>
+        <path class="cls-2" d="M21.27,24.82H1.12C.5,24.82,0,23.23,0,21.28V19.52H21.3"/>
+      </g>
+    </g>
+  </g>
+</svg>

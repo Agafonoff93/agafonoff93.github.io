@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 19">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #70a74b;
+        opacity: 0.58;
+      }
+    </style>
+  </defs>
+  <title>rect_00</title>
+  <g id="Слой_2" data-name="Слой 2">
+    <g id="Слой_1-2" data-name="Слой 1">
+      <path id="rect_00" class="cls-1" d="M.6,0H5.4A.6.6,0,0,1,6,.6V19a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V.6A.6.6,0,0,1,.6,0Z"/>
+    </g>
+  </g>
+</svg>
