@@ -1290,6 +1290,14 @@ body.ie ._ibg img {
   margin: 0 auto;
 }
 
+.article__icons {
+  display: block;
+  border-radius: 6px;
+  min-height: 180px;
+  overflow: hidden;
+  padding-bottom: 60%;
+}
+
 .article__title {
   font-size: 34px;
   font-weight: 700;
@@ -1332,6 +1340,7 @@ body.ie ._ibg img {
 
 .article__text img {
   max-width: 100%;
+  text-align: center;
 }
 
 .page {
