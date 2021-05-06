@@ -11,45 +11,31 @@
 }
 
 @font-face {
-  font-family: "icons";
-  font-display: swap;
-  src: url("../fonts/icons.woff") format("woff"), url("../fonts/icons.woff2#icons") format("woff2");
+  font-family: 'icons';
+  src: url("fonts/icons.ttf?jpr5xf") format("truetype"), url("fonts/icons.woff?jpr5xf") format("woff"), url("fonts/icons.svg?jpr5xf#icons") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="_icon-"]:before,
-[class*=" _icon-"]:before {
-  font-family: "icons";
+[class^="_icon-"],
+[class*=" _icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons' !important;
+  speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-[class^="_icon-"]:before,
-[class*=" _icon-"]:before {
-  display: block;
-}
-
-._icon-f:before {
-  content: "\EA01";
-}
-
-._icon-feather_edit:before {
-  content: "\EA02";
-}
-
-._icon-Group 18:before {
-  content: "\EA03";
-}
-
-._icon-Group 70:before {
-  content: "\EA04";
+._icon-viber:before {
+  content: "\e906";
+  color: #665cac;
 }
 
 ._icon-fb:before {
@@ -64,12 +50,28 @@
   content: "\e902";
 }
 
-._icon-twiter:before {
+._icon-twit:before {
   content: "\e903";
 }
 
 ._icon-mail:before {
   content: "\e904";
+}
+
+._icon-mail2:before {
+  content: "\ea84";
+}
+
+._icon-mail4:before {
+  content: "\ea86";
+}
+
+._icon-whatsapp:before {
+  content: "\ea93";
+}
+
+._icon-vk:before {
+  content: "\ea98";
 }
 
 ._icon-behance2:before {
@@ -1341,6 +1343,53 @@ body.ie ._ibg img {
 .article__text img {
   max-width: 100%;
   text-align: center;
+}
+
+.contacts__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 0 25px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 500;
+}
+
+.step-work__title {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 147.05882%;
+  margin: 0 0 30px 0;
+}
+
+.step-work__sentence {
+  margin: 0 0 35px 0;
+}
+
+.step-work__list {
+  margin: 0 0 35px 0;
+}
+
+.step-work__list p:first-child {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 147.05882%;
+  margin: 0 0 30px 0;
+}
+
+.contacts__payment p {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 0 55px 0;
+  line-height: 2;
+}
+
+.contacts__payment p:first-child {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 147.05882%;
+  margin: 0 0 30px 0;
 }
 
 .page {
